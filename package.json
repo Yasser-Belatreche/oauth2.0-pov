@@ -1,0 +1,68 @@
+{
+  "name": "oaut2.0",
+  "version": "1.0.0",
+  "description": "OAuth 2.0 Authorization server POC",
+  "main": "index.ts",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node build/index",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
+    "lint:fix": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "test:auth": "mocha 'src/components/auth-management/tests/**/*.test.ts'",
+    "test": "npm run test:auth",
+    "docker:test": "COMPOSE_DOCKER_CLI_BUILD=1 docker-compose -f docker/test/docker-compose.test.yml up",
+    "docker:dev": "COMPOSE_DOCKER_CLI_BUILD=1 docker-compose -f docker/dev/docker-compose.dev.yml up",
+    "docker:prod": "COMPOSE_DOCKER_CLI_BUILD=1 docker-compose -f docker/prod/docker-compose.prod.yml up"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yasser-Belatreche/yal-parcs-backend.git"
+  },
+  "author": "Yasser Belatreche",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yasser-Belatreche/yal-parcs-backend/issues"
+  },
+  "homepage": "https://github.com/Yasser-Belatreche/yal-parcs-backend#readme",
+  "dependencies": {
+    "@nestjs/common": "^9.0.0",
+    "@nestjs/core": "^9.0.0",
+    "@nestjs/platform-express": "^9.0.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "chai": "^4.3.7",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "mocha": "^10.2.0",
+    "prettier": "^2.8.7",
+    "supertest": "^6.3.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4",
+    "@nestjs/cli": "^9.0.0",
+    "@nestjs/schematics": "^9.0.0",
+    "@nestjs/testing": "^9.0.0",
+    "@types/express": "^4.17.13",
+    "@types/node": "18.15.11",
+    "@types/supertest": "^2.0.11",
+    "@typescript-eslint/parser": "^5.0.0",
+    "source-map-support": "^0.5.20"
+  }
+}
