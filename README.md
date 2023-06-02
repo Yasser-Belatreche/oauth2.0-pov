@@ -1,1 +1,1 @@
-# OAuth 2.0 GDG Live Coding Session
+# OAuth 2.0 GDG Live coding session
